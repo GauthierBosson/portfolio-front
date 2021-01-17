@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve & postcss src/styles/tailwind.css --o src/_tmp/style.css --watch",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss src/styles/tailwind.css --o public/style.css && cleancss public/style.css -o public/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@sanity/block-content-to-markdown": "^0.0.5",
+    "@sanity/client": "^2.1.4",
+    "alpinejs": "^2.8.0",
+    "autoprefixer": "^10.2.1",
+    "clean-css-cli": "^4.3.0",
+    "groq": "^2.1.4",
+    "html-minifier": "^4.0.0",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  }
+}

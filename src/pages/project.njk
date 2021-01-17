@@ -1,0 +1,19 @@
+---
+pagination:
+  alias: project
+  data: projects
+  size: 1
+permalink: "/projects/{{ project.name | slug }}/"
+title: {{ project.name }}
+---
+
+{% extends 'layout/base.njk' %}
+
+{% block metaTitle%}
+  {{ project.name }} | portfolio
+{% endblock %}
+
+{% block content %}
+  <p>{{ project.description }}</p>
+{% endblock %}
+

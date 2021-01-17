@@ -1,0 +1,22 @@
+---
+title: projects | portfolio
+permalink: "/projects/"
+---
+
+{% extends 'layout/base.njk' %}
+
+{% block metaTitle%}
+  projects | portfolio
+{% endblock %}
+
+{% block content %}
+  <section class="relative z-0 h-screen flex flex-col justify-center items-center px-7">
+    <h1 class="text-9xl text-white">Projects</h1>
+  </section>
+  {% for project in projects %}
+  <section class="h-screen flex flex-col justify-center items-center px-7">
+    <li><a class="text-white" href="/projects/{{ project.name | slug }}">{{ project.name }}</a></li>
+  </section>
+  {% endfor %}
+{% endblock %}
+
